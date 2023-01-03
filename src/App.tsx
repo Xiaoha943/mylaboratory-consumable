@@ -23,7 +23,7 @@ function App() {
     if (themeJSON) {
       const theme: Theme = JSON.parse(themeJSON);
       dispatch(setTheme(theme));
-      window.less?.modifyVars(theme.vars).catch((error) => console.error(error));
+      // window.less?.modifyVars(theme.vars).catch((error) => console.error(error));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

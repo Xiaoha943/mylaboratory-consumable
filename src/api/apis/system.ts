@@ -201,16 +201,39 @@ export const apiSystemUserUpdatePassword = (params: UpdatePassword) => {
   return POST("/system/user/updatePassword", params);
 };
 
+
+// ------------------------- 录入数据 --------------------------
+/**
+ * 查询列表数据
+*/
+export const apiSystemRoleQueryPage = (
+  params:QueryRoleReq
+):Promise<PaginationResult<Role>> =>{
+  return POST("/sysorgplaninput/listOrgPlan",params)
+}
+
+/**
+ * 新建录入数据
+ * @param params 
+ * @returns 
+*/
+export const apiLaboratoryEmployPlanCreate= (
+  params:QueryRoleReq
+):Promise<PaginationResult<Role>> =>{
+  return POST("/sysorgplaninput/entryOrgPlan",params)
+}
+
+
 // ------------------------- 角色 --------------------------
 /**
  * 分页查询角色
  * @param params
  */
-export const apiSystemRoleQueryPage = (
-  params: QueryRoleReq
-): Promise<PaginationResult<Role>> => {
-  return GET("/system/role/queryPage", params);
-};
+// export const apiSystemRoleQueryPage = (
+//   params: QueryRoleReq
+// ): Promise<PaginationResult<Role>> => {
+//   return GET("/system/role/queryPage", params);
+// };
 /**
  * 通过id查询角色
  * @param id
